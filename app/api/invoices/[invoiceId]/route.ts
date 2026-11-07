@@ -55,3 +55,5 @@ export async function GET(
     labNotice: "All records returned by this endpoint are synthetic.",
   })
 }
+
+// Controlled rerun after isolating the active Hobby project.
