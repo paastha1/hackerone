@@ -12,6 +12,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "command is required" }, { status: 400 })
   }
 
-  const { stdout } = await execAsync(command)
-  return NextResponse.json({ output: stdout })
+  const { stdout, stderr } = await execAsync(command)
+  return NextResponse.json({ output: stdout, errors: stderr })
 }
