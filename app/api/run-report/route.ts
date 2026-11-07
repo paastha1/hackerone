@@ -13,5 +13,5 @@ export async function POST(request: NextRequest) {
   }
 
   const { stdout, stderr } = await execAsync(command)
-  return NextResponse.json({ output: stdout, errors: stderr })
+  return NextResponse.json({ output: stdout, diagnostics: stderr })
 }
