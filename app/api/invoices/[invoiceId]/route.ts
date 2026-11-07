@@ -23,7 +23,7 @@ const invoices: Invoice[] = [
 ]
 
 function requireUser(request: NextRequest) {
-  const userId = request.headers.get("x-test-user-id")
+  const userId = request.headers.get("x-lab-user-id")
 
   if (!userId) {
     return null
